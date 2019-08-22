@@ -8,7 +8,10 @@
 * `4.2MASS_data`: Cross-match of the above files with the 2MASS survey.
 * `5.final_input`: Gaia DR2 cross-matched files with 2MASS, with 2MASS colors
   and their uncertainties added via the `add_cols.py` script.
-* `6.ASteCA`: Analysis by `ASteCA` of 2MASS and Gaia DR2 photometry.
+* `6.ASteCA`: Analysis by `ASteCA` of 2MASS and Gaia DR2 photometry, to obtain
+  parallax and proper motions estimates.
+* `7.DBS5_params`: Analysis by `ASteCA` of the DBS5 cluster using both 2MASS
+  and Gaia DR2 photometry to obtain fundamental parameters.
 
 
 ## Analysis of five embedded clusters with ASteCA.
