@@ -30,18 +30,23 @@ Note that the coordinates for 116 are different from those originally given by R
 DSS colored view of each cluster (via [Aladin](https://aladin.u-strasbg.fr)):
 
 **DBS5**
+
 ![](figs/dbs5.png)
 
 **DBS60**
+
 ![](figs/dbs60.png)
 
 **DBS98**
+
 ![](figs/dbs98.png)
 
 **DBS116**
+
 ![](figs/dbs116.png)
 
 **DBS117**
+
 ![](figs/dbs117.png)
 
 
