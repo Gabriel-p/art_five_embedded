@@ -1,12 +1,17 @@
 
-## Analysis of five embedded clusters with ASteCA.
+## Folders content
 
-1. Original files by Rubén
-2. Processed original files to feed UBV-move, and the output.
-3. Files retrieved via the `GaiaQuery` package.
-4. Cross-match with 2MASS survey.
-5. Cross-matched files with 2MASS, with the 2MASS colors and their
-   uncertainties added via the `add_cols.py` script
+* `1.original_RAV`: Original data files sent by Rubén.
+* `2.UBV_move`: Processed original files to feed the `UBV-move` code, and
+  the output.
+* `3.Gaia_data`: Files retrieved via the `GaiaQuery` package.
+* `4.2MASS_data`: Cross-match of the above files with the 2MASS survey.
+* `5.final_input`: Gaia DR2 cross-matched files with 2MASS, with 2MASS colors
+  and their uncertainties added via the `add_cols.py` script.
+* `6.ASteCA`: Analysis by `ASteCA` of 2MASS and Gaia DR2 photometry.
+
+
+## Analysis of five embedded clusters with ASteCA.
 
 The clusters were originally presented in the article [Dutra et al. (2003)](https://ui.adsabs.harvard.edu/abs/2003A%26A...400..533D/abstract):
 
@@ -29,28 +34,28 @@ Note that the coordinates for 116 are different from those originally given by R
 
 DSS colored view of each cluster (via [Aladin](https://aladin.u-strasbg.fr)):
 
-**DBS5**
+**[DBS5](http://aladin.unistra.fr/AladinLite/?target=07%2030%204.000-18%2032%206.00&fov=0.42&survey=P%2FDSS2%2Fcolor)**
 
 ![](figs/dbs5.png)
 
-**DBS60**
+**[DBS60](http://aladin.unistra.fr/AladinLite/?target=11%2005%2036.600-62%2028%2054.50&fov=0.42&survey=P%2FDSS2%2Fcolor)**
 
 ![](figs/dbs60.png)
 
-**DBS98**
+**[DBS98](http://aladin.unistra.fr/AladinLite/?target=15%2059%2038.000-53%2045%2024.00&fov=0.42&survey=P%2FDSS2%2Fcolor)**
 
 ![](figs/dbs98.png)
 
-**DBS116**
+**[DBS116](http://aladin.unistra.fr/AladinLite/?target=17%2009%2034.000-41%2036%200.00&fov=0.42&survey=P%2FDSS2%2Fcolor)**
 
 ![](figs/dbs116.png)
 
-**DBS117**
+**[DBS117](http://aladin.unistra.fr/AladinLite/?target=16%2059%2039.000-40%2011%2024.00&fov=0.42&survey=P%2FDSS2%2Fcolor)**
 
 ![](figs/dbs117.png)
 
 
-### Analysis with 2MASS
+### 2MASS photometry
 
 This analysis uses 2MASS data only. These files contain about half as many stars as the Gaia DR2 data files.
 
@@ -103,7 +108,7 @@ DBS117  -0.325   -1.019 [mas/yr]
 ```
 
 
-### Analysis with Gaia DR2
+### Gaia DR2 photometry
 
 The maximum uncertainty cuts are done at `eG_{max}=0.01` mag,
 `eBPRP_{max}=0.2` mag.
