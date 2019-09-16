@@ -10,8 +10,6 @@
   and their uncertainties added via the `add_cols.py` script.
 * `6.ASteCA`: Analysis by `ASteCA` of 2MASS and Gaia DR2 photometry, to obtain
   parallax and proper motions estimates.
-* `7.DBS5_params`: Analysis by `ASteCA` of the DBS5 cluster using both 2MASS
-  and Gaia DR2 photometry to obtain fundamental parameters.
 
 
 ## Analysis of five embedded clusters with ASteCA.
@@ -64,50 +62,49 @@ This analysis uses 2MASS data only. These files contain about half as many stars
 
 For DBS5, 60, 98, the structural overdensities are clearly distinguishable over the foreground/background (field) noise. For DBS177 a more weak but still noticeable overdensity is appreciated. No clear structural overdensity can be seen for DBS116. For these two clusters (116, 117) the radius is fixed to 1 arcmin, while the remaining values are estimated by `ASteCA`.
 
-The maximum uncertainty cuts are done at `eJ_{max}=0.1` mag, `eJH_{max}=0.2` mag, `eJK_{max}=0.2` mag, `eHK_{max}=0.2` mag. We use somewhat large maximum values to avoid losing too many stars.
+The maximum uncertainty cuts are done at `eJ_{max}=0.1` mag, `eHKs_{max}=0.2` mag. We use somewhat large maximum values to avoid losing too many stars.
 
 The comparison with the surrounding field density shows that the number of members within each defined cluster region is:
 
 ```
 Name    N_memb
 --------------
-DBS5    ~28
-DBS60   ~13
+DBS5    ~27
+DBS60   ~12
 DBS98   ~0
 DBS116  ~0
-DBS117  ~7
+DBS117  ~8
 ```
 
 
 #### Parallax distances
 
-The parallax analysis was performed **without cleaning the cluster region from field stars**, due to the low number of probable members in all regions. This means that the distance estimates obtained with the Bayesian method and the parallax data should be taken with care. Also, an offset of +0.029 mas was added to the parallax values, as suggested by [Lindegren et al. (2018)](https://www.aanda.org/articles/aa/abs/2018/08/aa32727-18/aa32727-18.html).
+The parallax analysis was performed after cleaning the cluster region from field stars. Due to the low number of probable members in all regions, the distance estimates obtained with the Bayesian method and the parallax data should be taken with care. An offset of +0.029 mas was added to the parallax values, as suggested by [Lindegren et al. (2018)](https://www.aanda.org/articles/aa/abs/2018/08/aa32727-18/aa32727-18.html).
 
 The final distance estimates (and their 16th, 84th percentiles) are:
 
 ```
 Name    d_Plx (16th, 84th)
 --------------------------
-DBS5    3436 (3085, 3789) [pc]
-DBS60   5507 (4975, 6023) [pc]
-DBS98   2775 (2447, 3105) [pc]
-DBS116  3073 (2581, 3563) [pc]
-DBS117  1500 (1273, 1727) [pc]
+DBS5    4020 (3573, 4476) [pc]
+DBS60   5585 (5055, 6110) [pc]
+DBS98   2666 (2443, 2888) [pc]
+DBS116 10633 (9631, 11641) [pc]
+DBS117  1848 (1522, 2182) [pc]
 ```
 
 #### Proper motions
 
-As with the parallax analysis above, the proper motions analysis was performed **without cleaning the cluster region from field stars**.
 The estimated proper motion for the cluster regions, obtained through the maximum value of the 2D KDE are:
 
 ```
 Name    pmRA     pmDEC
 -----------------------
-DBS5    -1.723    2.292 [mas/yr]
-DBS60   -2.330    1.678 [mas/yr]
-DBS98   -1.414   -3.522 [mas/yr]
-DBS116   0.286   -2.867 [mas/yr]
-DBS117  -0.325   -1.019 [mas/yr]
+DBS5    -1.751    2.404 [mas/yr]
+DBS60   -2.357    1.681 [mas/yr]
+DBS98   -1.719   -3.666 [mas/yr]
+DBS116  -1.493   -4.322 [mas/yr]
+DBS117  -0.121   -0.829 [mas/yr]
 ```
 
 
@@ -121,7 +118,7 @@ The comparison with the surrounding field density shows that the number of membe
 ```
 Name    N_memb
 --------------
-DBS5    ~76
+DBS5    ~75
 DBS60   ~22
 DBS98   ~21
 DBS116  ~0
@@ -136,11 +133,11 @@ As above, the parallax analysis was performed **without cleaning the cluster reg
 ```
 Name    d_Plx (16th, 84th)
 --------------------------
-DBS5    3421 (3109, 3726) [pc]
-DBS60   4871 (4472, 5280) [pc]
-DBS98   2742 (2586, 2902) [pc]
-DBS116  2595 (2372, 2823) [pc]
-DBS117  1543 (1341, 1747) [pc]
+DBS5    4091 (3724, 4466) [pc]
+DBS60   5668 (5162, 6187) [pc]
+DBS98   3090 (2823, 3361) [pc]
+DBS116  9275 (8267, 10272) [pc]
+DBS117  1639 (1393, 1874) [pc]
 ```
 
 #### Proper motions
@@ -151,10 +148,10 @@ Same treatment as in the 2MASS analysis. Results are:
 ```
 Name    pmRA     pmDEC
 -----------------------
-DBS5    -1.719    2.302 [mas/yr]
-DBS60   -2.382    1.764 [mas/yr]
-DBS98   -0.149   -0.697 [mas/yr]
-DBS116   0.668   -2.091 [mas/yr]
-DBS117  -0.077   -0.697 [mas/yr]
+DBS5    -1.696    2.098 [mas/yr]
+DBS60   -2.363    1.697 [mas/yr]
+DBS98   -0.983   -2.921 [mas/yr]
+DBS116  -1.562   -4.352 [mas/yr]
+DBS117  -0.324   -1.096 [mas/yr]
 ```
 
